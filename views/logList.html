@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log Files</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+
+    <h2>Log Files</h2>
+
+    <div class="container">
+
+        <!-- Header row -->
+        <div class="row header">
+            <span class="filename-header">Filename</span>
+        </div>
+
+        <!-- Log file rows -->
+        ${files.map(file => `
+        <div class="row file-row">
+            <a href="/logs/show/${encodeURIComponent(file)}">${file}</a>
+        </div>
+        `).join('')}
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+    "use_https": true,
+    "http_port": 8080,
+    "https_port": 443,
+    "https_key": "./ssl/archi.key",
+    "https_cert": "./ssl/archi.crt",
+    "root": "./public"
+}

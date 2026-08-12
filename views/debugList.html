@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debug File List</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+
+    <h2>Debug Files</h2>
+
+    <div class="container">
+
+        <!-- Header row -->
+        <div class="row header">
+            <input type="checkbox" id="selectAll">
+            <span class="filename-header">Filename</span>
+        </div>
+
+        <!-- File rows -->
+        ${files.map(file => `
+        <div class="row file-row">
+            <input type="checkbox" class="fileCheck" value="${file}">
+            <a href="/debug/show/${encodeURIComponent(file)}">${file}</a>
+        </div>
+        `).join('')}
+
+        <!-- Action row -->
+        <div class="row actions">
+            <button id="uploadBtn" class="btn-primary">Upload</button>
+            <button id="deleteBtn" class="btn-danger disabled" disabled>Delete</button>
+        </div>
+
+    </div>
+
+    <!-- External script for list page behaviour -->
+    <script src="/static/debugList.js"></script>
+
+</body>
+
+</html>

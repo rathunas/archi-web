@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debug Transfer</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+
+    <h2>Debug Transfer</h2>
+
+    <!-- Filename + Save button row -->
+    <div class="row">
+        <input id="filename" type="text" placeholder="Filename">
+        <button id="saveBtn" class="btn-primary disabled" disabled>Save</button>
+    </div>
+
+    <!-- Contents label -->
+    <div class="row">
+        <label for="contents">Contents</label>
+    </div>
+
+    <!-- Contents textarea -->
+    <div class="row">
+        <textarea id="contents"></textarea>
+    </div>
+
+    <script>
+        /**
+         * Utility: checks if both filename and contents are non-empty
+         */
+        function updateSaveButtonState() {
+
+            const filename = document.getElementById('filename').value.trim();
+            const contents = document.getElementById('contents').value;
+
+            const saveBtn = document.getElementById('saveBtn');
+
+            // Enable only when both fields have content
+            if (filename && contents) {
+                saveBtn.disabled = false;
+                saveBtn.classList.remove('disabled');
+            } else {
+                saveBtn.disabled = true;
+                saveBtn.classList.add('disabled');
+            }
+        }
+
+        /**
+         * Attach input listeners to update Save button state
+         */
+        document.getElementById('filename').oninput = updateSaveButtonState;
+        document.getElementById('contents').oninput = updateSaveButtonState;
+
+        /**
+         * Save button handler
+         */
+        document.getElementById('saveBtn').onclick = async function () {
+
+            // Read filename from input field
+            const filename = document.getElementById('filename').value.trim();
+
+            // Read contents from textarea
+            const contents = document.getElementById('contents').value;
+
+            // Validate filename
+            if (!filename) {
+                alert('Filename cannot be empty');
+                return;
+            }
+
+            // Validate contents
+            if (!contents) {
+                alert('Contents cannot be empty');
+                return;
+            }
+
+            // Send POST request to save endpoint
+            const res = await fetch('/debug/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ filename, contents })
+            });
+
+            // Parse JSON response
+            const json = await res.json();
+
+            // Navigate to debug list page
+            window.location.href = '/debug';
+        };
+
+        // Initial state on page load
+        updateSaveButtonState();
+    </script>
+
+</body>
+
+</html>
