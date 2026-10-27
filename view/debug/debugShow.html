@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title id="title">View Debug File</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(data)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/debug/debugShow.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar id="navbar">
+        <a href="/">Home</a>
+        <a href="/debug">Debug</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <div class="row">
+
+            <label class="left-label">Filename</label>
+
+            <div class="left-field">
+                <input
+                    id="filename-input"
+                    type="text"
+                    placeholder="New filename"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    inputmode="text"
+                    required
+                >
+
+                <button
+                    id="rename-button"
+                    class="primary disabled"
+                    disabled
+                >Rename</button>
+            </div>
+        </div>
+
+        <br>
+
+        <div
+            id="contents"
+            class="file-contents"
+        ></div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+    "use_https": true,
+    "http_port": 8080,
+    "https_port": 443,
+    "https_key": "./ssl/archi.key",
+    "https_cert": "./ssl/archi.crt",
+    "root": "../archi-web-files",
+    "archi": "C:/Program Files/Archi/Archi.exe",
+    "wiki": "https://arch.o.dstl.gov.uk/o/Design:"
+}

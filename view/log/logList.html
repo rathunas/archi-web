@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title>Log Files</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/css/data-table.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/log/log.css"
+    >
+
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(rows)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/components/AppDataTable.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/log/logList.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar current="Logs">
+        <a href="/">Home</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <app-data-table id="list">
+
+            <div
+                id="filename"
+                data-sortable
+            >Filename</div>
+
+            <div
+                id="modified-date"
+                data-sortable
+            >Date Modified</div>
+
+            <div
+                id="size"
+                data-sortable
+            >Size</div>
+
+        </app-data-table>
+
+    </div>
+
+</body>
+
+</html>

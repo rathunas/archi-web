@@ -1,0 +1,123 @@
+/* Data table style */
+.data-table {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    padding: 6px 0;
+}
+
+/* Header uses horizontal layout */
+.data-table-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding: 6px 0;
+}
+
+/* Body uses block layout so rows stretch full width */
+.data-table-body {
+    display: block;
+    width: 100%;
+}
+
+/* Body rows must stretch full width */
+.data-table-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding: 6px 0;
+}
+
+/* Selector column (checkbox column) */
+.data-table-selector,
+.data-table-row-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+
+/* Header data columns */
+.data-table-column {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    flex: 1;
+}
+
+/* Body data cells */
+.data-table-row-cell {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    flex: 1;
+}
+
+/* Footer uses horizontal layout */
+.data-table-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 6px 0;
+    border-top: 2px solid #ccc;
+}
+
+.app-data-table-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding: 6px 0;
+}
+
+.app-data-table-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.app-data-table-row {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 100%;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 6px 0;
+}
+
+.app-data-table-header>[data-selector],
+.app-data-table-row>[data-selector] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+
+.app-data-table-heading-sortable {
+    cursor: pointer;
+}
+
+.app-data-table-heading-sortable:hover {
+    color: black;
+}
+
+/* Footer uses horizontal layout */
+.app-data-table-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 6px 0;
+    border-top: 2px solid #ccc;
+}

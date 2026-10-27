@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title>Add Debug File</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/debug/debugAdd.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar current="Add File">
+        <a href="/">Home</a>
+        <a href="/debug">Debug</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <form
+            id="form-add"
+            novalidate
+        >
+
+            <div class="row">
+
+                <label
+                    class="left-label"
+                    for="filename-input"
+                >Filename</label>
+
+                <div class="left-field">
+
+                    <input
+                        id="filename-input"
+                        name="filename"
+                        type="text"
+                        placeholder="Filename"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        required
+                    >
+
+                    <button
+                        id="save-button"
+                        class="primary disabled"
+                        disabled
+                    >Save</button>
+
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <label for="contents-input">Contents</label>
+            </div>
+
+            <div class="row">
+                <textarea
+                    id="contents-input"
+                    name="contents"
+                    rows="12"
+                    placeholder="Enter file contents"
+                    required
+                ></textarea>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title>Submit Job Request</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/queue/queue.css"
+    >
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/queue/queueAdd.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar current="Submit Request">
+        <a href="/">Home</a>
+        <a href="/queue">Queue</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <form
+            id="form-add"
+            novalidate
+        >
+
+            <div class="row">
+
+                <label class="right-label">Select archimate file</label>
+
+                <div class="left-field">
+
+                    <button
+                        id="file-button"
+                        type="button"
+                        class="secondary"
+                    >Choose File</button>
+
+                    <input
+                        id="file-input"
+                        type="file"
+                        accept=".archimate"
+                        class="hidden-file-input"
+                    >
+
+                    <span
+                        id="file-display"
+                        class="field-info"
+                    >No file chosen</span>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <label class="right-label">Design Package</label>
+
+                <div class="left-field">
+
+                    <input
+                        id="package-name-input"
+                        type="text"
+                        placeholder="Package name"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        inputmode="text"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <label class="right-label">Version Timestamp</label>
+
+                <div class="left-field">
+                    <input
+                        id="version-date-input"
+                        type="datetime-local"
+                        step="1"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <div class="row actions">
+
+                <button
+                    id="submit-button"
+                    type="submit"
+                    class="primary disabled"
+                    disabled
+                >Submit</button>
+
+                <button
+                    id="reset-button"
+                    type="button"
+                    class="secondary"
+                >Reset</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

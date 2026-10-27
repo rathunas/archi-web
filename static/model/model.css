@@ -1,0 +1,25 @@
+[id^="error-attempt"] {
+   flex: 0 0 5%;
+}
+
+[id^="error-date"] {
+   flex: 0 0 15%;
+}
+
+#list [id^="package-name"] {
+   flex: 0 0 40%;
+}
+
+#list [id^="version-count"] {
+   flex: 0 0 15%;
+}
+
+.step-title {
+   margin-top: 24px;
+   margin-bottom: 8px;
+   font-size: 18px;
+   font-weight: bold;
+   color: #555;
+   border-bottom: 1px solid #ddd;
+   padding-bottom: 4px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title>Home</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(data)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/home.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar current="Home"></app-navbar>
+
+    <div class="container">
+
+        <div class="row file-row">
+            <a
+                id="queue"
+                href="/queue"
+            >Queue</a>
+        </div>
+
+        <div class="row file-row">
+            <a
+                id="model"
+                href="/model"
+            >Models</a>
+        </div>
+
+        <div class="row file-row">
+            <a
+                id="debug"
+                href="/debug"
+            >Debug</a>
+        </div>
+
+        <div class="row file-row">
+            <a
+                id="log"
+                href="/log"
+            >Logs</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

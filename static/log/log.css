@@ -1,0 +1,11 @@
+[id^="filename"] {
+    flex: 0 0 40%;
+}
+
+[id^="modified-date"] {
+    flex: 0 0 25%;
+}
+
+[id^="size"] {
+    flex: 0 0 25%;
+}

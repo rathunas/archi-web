@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title>Debug Files</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/css/data-table.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/debug/debug.css"
+    >
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(rows)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/components/AppDataTable.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/debug/debugList.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar current="Debug">
+        <a href="/">Home</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <app-data-table id="list">
+
+            <input
+                type="checkbox"
+                id="list-selector"
+                data-selector
+            >
+
+            <div
+                id="filename"
+                data-sortable
+            >Filename</div>
+
+            <div
+                id="modified-date"
+                data-sortable
+            >Date Modified</div>
+
+            <div
+                id="size"
+                data-sortable
+            >Size</div>
+
+        </app-data-table>
+
+        <div class="row actions">
+
+            <button
+                id="add-button"
+                class="primary"
+            >New</button>
+
+            <button
+                id="delete-button"
+                class="danger disabled"
+                disabled
+            >Delete</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

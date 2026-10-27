@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title id="title">View Model Design Package</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/css/data-table.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/model/model.css"
+    >
+
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(data)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/components/AppDataTable.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/model/modelShowPackage.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar id="navbar">
+        <a href="/">Home</a>
+        <a href="/model">Models</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <div class="row">
+
+            <label
+                id="package-name-label"
+                class="right-label"
+            >Design Package</label>
+
+            <div class="left-field">
+
+                <input
+                    id="package-name-input"
+                    type="text"
+                    placeholder="New package name"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    inputmode="text"
+                    required
+                >
+
+                <button
+                    id="rename-button"
+                    class="primary disabled"
+                    disabled
+                >Rename</button>
+
+                <a
+                    id="master-link"
+                    class="button secondary"
+                >Download Master</a>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <app-data-table id="list">
+
+            <input
+                type="checkbox"
+                id="list-selector"
+                data-selector
+            >
+
+            <div
+                id="version-date"
+                data-sortable
+            >
+                Version Date
+            </div>
+
+        </app-data-table>
+
+        <div class="row actions">
+
+            <button
+                id="delete-button"
+                class="danger disabled"
+                disabled
+            >Delete</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

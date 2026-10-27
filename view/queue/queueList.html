@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title>Job Queue Requests</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/css/data-table.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/queue/queue.css"
+    >
+
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(data)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/components/AppDataTable.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/queue/QueueList.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar current="Queue">
+        <a href="/">Home</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <app-data-table id="list">
+
+            <input
+                type="checkbox"
+                id="list-selector"
+                data-selector
+            >
+
+            <div
+                id="request-id"
+                data-sortable
+            >
+                Request ID
+            </div>
+
+            <div
+                id="submitted-date"
+                data-sortable
+            >
+                Submitted Date
+            </div>
+
+            <div
+                id="job-status"
+                data-sortable
+            >
+                Status
+            </div>
+
+            <div
+                id="filename"
+                data-sortable
+            >
+                Filename
+            </div>
+
+            <div
+                id="package-name"
+                data-sortable
+            >
+                Design Package
+            </div>
+
+            <div
+                id="version-date"
+                data-sortable
+            >
+                Version Date
+            </div>
+
+        </app-data-table>
+
+        <div class="row actions">
+
+            <button
+                id="add-button"
+                class="primary"
+            >New</button>
+
+            <button
+                id="delete-button"
+                class="danger disabled"
+                disabled
+            >Delete</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+#list [id^="request-id"] {
+   flex: 0 0 22%;
+}
+
+#list [id^="submitted-date"] {
+   flex: 0 0 12%;
+}
+
+#list [id^="job-status"] {
+   flex: 0 0 5%;
+}
+
+#list [id^="filename"] {
+   flex: 0 0 23%;
+}
+
+#list [id^="package-name"] {
+   flex: 0 0 23%;
+}
+
+#list [id^="version-date"] {
+   flex: 0 0 12%;
+}
+
+[id^="error-date"] {
+   flex: 0 0 15%;
+}
+
+[id^="error-attempt"] {
+   flex: 0 0 5%;
+}
+
+[id^="error-message"] {
+   white-space: pre-wrap;
+}
+
+.step-title {
+   margin-top: 24px;
+   margin-bottom: 8px;
+   font-size: 18px;
+   font-weight: bold;
+   color: #555;
+   border-bottom: 1px solid #ddd;
+   padding-bottom: 4px;
+}

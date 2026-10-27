@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title>Model Package Error</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/model/model.css"
+    >
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        &nbsp;/&nbsp;
+        <a href="/model">Model</a>
+        &nbsp;/&nbsp;
+        Error
+    </div>
+
+    <div class="container">
+
+        <div class="error-box">
+            <h3 class="error-title">Cannot display model package</h3>
+            <p class="error-message">
+                The model package <strong>${package}</strong> version <strong>${version}</strong> cannot be displayed
+                because either
+            <ul>
+                <li>the package or version folder has been moved or deleted</li>
+                <li>the <code>info.json</code> file is missing from the version folder or corrupted</li>
+                <li>the <code>status.json</code> file is missing from the version folder or corrupted</li>
+            </ul>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

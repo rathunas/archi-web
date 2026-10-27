@@ -1,0 +1,17 @@
+{
+    "name": "archi-web",
+    "version": "1.0.0",
+    "description": "Archi HTTPS Web Server",
+    "main": "server.mjs",
+    "scripts": {
+        "start": "node server.mjs",
+        "trace": "node --trace-deprecation --trace-warnings server.mjs"
+    },
+    "dependencies": {
+        "cors": "^2.8.6",
+        "express": "^5.3.0",
+        "fflate": "^0.8.3",
+        "multer": "^2.5.0",
+        "xml-js": "^1.6.11"
+    }
+}

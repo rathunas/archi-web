@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title id="title">View Log File</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(data)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/log/logShow.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar id="navbar">
+        <a href="/">Home</a>
+        <a href="/log">Logs</a>
+    </app-navbar>
+
+    <div
+        id="contents"
+        class="file-contents"
+    ></div>
+
+</body>
+
+</html>

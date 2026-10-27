@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="Content-Language"
+        content="en"
+    >
+
+    <title id="title">View Job Queue Request</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/app.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/css/data-table.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/queue/queue.css"
+    >
+
+    <script
+        id="data"
+        type="application/json"
+    >${JSON.stringify(data)}</script>
+
+    <script
+        type="module"
+        src="/static/components/AppNavbar.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/components/AppDataTable.mjs"
+    ></script>
+
+    <script
+        type="module"
+        src="/static/queue/queueShow.mjs"
+    ></script>
+
+</head>
+
+<body>
+
+    <span style="display:none">This page is in English.</span>
+
+    <app-navbar id="navbar">
+        <a href="/">Home</a>
+        <a href="/queue">Queue</a>
+    </app-navbar>
+
+    <div class="container">
+
+        <!-- File Metadata -->
+        <div class="row">
+            <label class="right-label">Request ID</label>
+            <div class="left-field">
+                <span
+                    id="request-id"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Submitted Date</label>
+            <div class="left-field">
+                <span
+                    id="submitted-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        </br>
+
+        <div class="row">
+            <label class="right-label">Filename</label>
+            <div class="left-field">
+                <span
+                    id="filename"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Design Package</label>
+            <div class="left-field">
+                <span
+                    id="package-name"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Version Date</label>
+            <div class="left-field">
+                <span
+                    id="version-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        </br>
+
+        <!-- Job Lifecycle Status -->
+        <div class="row">
+            <label class="right-label">Status</label>
+            <div class="left-field">
+                <span
+                    id="job-status"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Completed Date</label>
+            <div class="left-field">
+                <span
+                    id="completed-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <!-- Attempts -->
+        <div class="row">
+            <label class="right-label">Job Run Count</label>
+            <div class="left-field">
+                <span
+                    id="job-attempts"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <!-- Error -->
+        <div class="row">
+            <label class="right-label">Errors</label>
+            <div class="left-field">
+                <span
+                    id="job-errors"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+        <!-- Step 1 - Unzip Archimate File -->
+        <!-- ------------------------------------------------------------ -->
+        <h3 class="step-title">Job Step 1 — Unzip Archimate File</h3>
+
+        <div class="row">
+            <label class="right-label">Start</label>
+            <div class="left-field">
+                <span
+                    id="unzip-start-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Stop</label>
+            <div class="left-field">
+                <span
+                    id="unzip-stop-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Duration (s)</label>
+            <div class="left-field">
+                <span
+                    id="unzip-duration"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+        <!-- Step 2 - Generate HTML Report -->
+        <!-- ------------------------------------------------------------ -->
+        <h3 class="step-title">Job Step 2 — Generate HTML Report</h3>
+
+        <div class="row">
+            <label class="right-label">Start</label>
+            <div class="left-field">
+                <span
+                    id="report-start-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Stop</label>
+            <div class="left-field">
+                <span
+                    id="report-stop-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Duration (s)</label>
+            <div class="left-field">
+                <span
+                    id="report-duration"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+        <!-- Step 3 - Move To Model Folder -->
+        <!-- ------------------------------------------------------------ -->
+        <h3 class="step-title">Job Step 3 — Move To Model Folder</h3>
+
+        <div class="row">
+            <label class="right-label">Start</label>
+            <div class="left-field">
+                <span
+                    id="move-start-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Stop</label>
+            <div class="left-field">
+                <span
+                    id="move-stop-date"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="right-label">Duration (s)</label>
+            <div class="left-field">
+                <span
+                    id="move-duration"
+                    class="field-info"
+                ></span>
+            </div>
+        </div>
+
+        <app-data-table
+            id="list"
+            style="display: none;"
+        >
+
+            <div
+                id="error-attempt"
+                data-sortable
+            >
+                Error
+            </div>
+
+            <div
+                id="error-date"
+                data-sortable
+            >
+                Date
+            </div>
+
+            <div
+                id="error-message"
+                data-sortable
+            >
+                Message
+            </div>
+
+        </app-data-table>
+
+        <!-- Actions -->
+        <div class="row actions">
+
+            <!-- Start Worker button: enabled only when NOT running -->
+            <button
+                id="start-worker"
+                class="primary disabled"
+                disabled
+            >
+                Start Worker
+            </button>
+
+            <!-- Stop Worker button: enabled only when running -->
+            <button
+                id="stop-worker"
+                class="danger disabled"
+                disabled
+            >
+                Stop Worker
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
